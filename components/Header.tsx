@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 const navItems = [
-    { label: "Radiografía", href: "#radiografia" },
+    { label: "Diagnóstico", href: "#diagnostico" },
     { label: "Servicios", href: "#servicios" },
     { label: "Manifiesto", href: "#manifiesto" },
     { label: "Contacto", href: "#contacto" },
@@ -124,7 +124,7 @@ export function Header() {
 
                 {/* CTA Button */}
                 <motion.a
-                    href="#radiografia"
+                    href="#diagnostico"
                     className={`ml-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${isScrolled
                         ? "bg-[#0a0a0a] text-white hover:bg-[#1a1a1a]"
                         : "bg-white/95 text-[#0a0a0a] hover:bg-white"
@@ -132,7 +132,7 @@ export function Header() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                 >
-                    Radiografía
+                    Diagnóstico
                 </motion.a>
             </motion.nav>
         </header>

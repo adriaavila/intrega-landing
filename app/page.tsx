@@ -11,7 +11,7 @@ export default function Home() {
         {/* Content Sections - Normal page flow below hero animation */}
 
         {/* EL PROBLEMA / DIAGNÓSTICO Section */}
-        <section id="radiografia" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
+        <section id="diagnostico" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -21,7 +21,7 @@ export default function Home() {
             >
               {/* Section label */}
               <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#C8C6D7] uppercase mb-6">
-                Radiografía
+                Diagnóstico
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-12">
