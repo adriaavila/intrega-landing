@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 
 const navItems = [
-    { label: "Diagnóstico", href: "#diagnostico" },
+    { label: "Radiografía", href: "#radiografia" },
     { label: "Servicios", href: "#servicios" },
     { label: "Manifiesto", href: "#manifiesto" },
     { label: "Contacto", href: "#contacto" },
