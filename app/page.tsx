@@ -11,7 +11,7 @@ export default function Home() {
         {/* Content Sections - Normal page flow below hero animation */}
 
         {/* EL PROBLEMA / DIAGNÓSTICO Section */}
-        <section id="diagnostico" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
+        <section id="radiografia" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
