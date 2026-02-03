@@ -1,7 +1,25 @@
 "use client";
 
-import { OperationsScanner } from "@/components/OperationsScanner";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+
+// Lazy load the heavy OperationsScanner component
+const OperationsScanner = dynamic(
+  () => import("@/components/OperationsScanner").then(mod => ({ default: mod.OperationsScanner })),
+  {
+    ssr: false, // Disable SSR for this heavy component
+    loading: () => (
+      <div className="h-screen bg-[#0a0a0a] flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <span className="font-mono text-sm tracking-[0.3em] text-white/60 uppercase">INTEGRA</span>
+          <div className="w-48 h-[2px] bg-white/10 overflow-hidden">
+            <div className="h-full bg-white/80 animate-pulse" style={{ width: '60%' }} />
+          </div>
+        </div>
+      </div>
+    ),
+  }
+);
 
 export default function Home() {
   return (
@@ -153,7 +171,7 @@ export default function Home() {
 
               {/* CTA Button - Inverted colors */}
               <motion.a
-                href="#contacto"
+                href="/diagnostico"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#F5F5F5] text-[#4A4063] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
@@ -180,87 +198,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="relative bg-[#0a0a0a] border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-            <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
-              {/* Brand */}
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <svg
-                    className="w-8 h-8"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="16" cy="16" r="15" fill="#4A4063" />
-                    <rect x="13" y="7" width="6" height="18" rx="1" fill="#F5F5F5" />
-                    <rect x="13" y="7" width="10" height="5" rx="1" fill="#F5F5F5" />
-                    <rect x="9" y="20" width="10" height="5" rx="1" fill="#F5F5F5" />
-                    <circle cx="25" cy="9.5" r="2" fill="#C8C6D7" />
-                    <circle cx="7" cy="22.5" r="2" fill="#C8C6D7" />
-                  </svg>
-                  <h3 className="font-mono text-sm tracking-[0.3em] text-white/60 uppercase">
-                    INTEGRA
-                  </h3>
-                </div>
-                <p className="text-white/40 text-sm max-w-xs">
-                  Sistemas para la continuidad operativa.
-                </p>
-              </div>
-
-              {/* Contact Form Section */}
-              <div id="contacto" className="flex-1 max-w-md w-full">
-                <h4 className="text-white/80 text-lg font-medium mb-6">
-                  Solicitar diagnóstico
-                </h4>
-                <form className="flex flex-col gap-4">
-                  <input
-                    type="text"
-                    placeholder="Nombre"
-                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/30
-                             focus:outline-none focus:border-white/30 transition-colors"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Negocio"
-                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/30
-                             focus:outline-none focus:border-white/30 transition-colors"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/30
-                             focus:outline-none focus:border-white/30 transition-colors"
-                  />
-                  <textarea
-                    placeholder="Principal bottleneck"
-                    rows={3}
-                    className="bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white placeholder:text-white/30
-                             focus:outline-none focus:border-white/30 transition-colors resize-none"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-white text-[#0a0a0a] px-6 py-3 rounded-sm font-semibold
-                             transition-all duration-300 ease-out
-                             hover:bg-white/90
-                             active:bg-white/80"
-                  >
-                    Enviar
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Bottom bar */}
-            <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/30 text-xs font-mono">
-                © 2026 INTEGRA. Sistemas para la continuidad operativa.
-              </p>
-
-            </div>
-          </div>
-        </footer>
+        {/* Section Manifiesto ends here - Footer is now in layout.tsx */}
       </OperationsScanner>
     </main>
   );

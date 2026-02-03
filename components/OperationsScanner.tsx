@@ -7,17 +7,19 @@ import {
     useCallback,
     type ReactNode,
 } from "react";
-import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Frame configuration
 const TOTAL_FRAMES = 192;
-const FRAME_PATH = "/hero-frames";
+const FRAME_PATH = "/hero-frames-webp";
+const ANIMATION_DURATION_MS = 4200; // Duration to play through all frames (4.2 seconds)
+const CRITICAL_FRAMES = 30; // Load first 30 frames immediately for fast initial render
 
 // Generate frame filenames based on the actual naming pattern
 function getFrameFilename(index: number): string {
     const paddedIndex = index.toString().padStart(3, "0");
     const delayPart = index % 3 === 1 ? "0.041s" : "0.042s";
-    return `frame_${paddedIndex}_delay-${delayPart}.jpg`;
+    return `frame_${paddedIndex}_delay-${delayPart}.webp`;
 }
 
 interface OperationsScannerProps {
@@ -35,68 +37,135 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
 
     const [imgRatio, setImgRatio] = useState<number | null>(null);
 
-    // Scroll-driven animation: track scroll progress within the hero section
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"], // Animation plays from start to when section exits viewport
-    });
+    // Animation lock state - prevents scrolling until intro animation completes
+    const [isAnimationLocked, setIsAnimationLocked] = useState(true);
+    const [introComplete, setIntroComplete] = useState(false);
+    const animationStartTimeRef = useRef<number | null>(null);
 
-    // Apply spring physics for ultra-smooth frame interpolation
-    const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 80,
-        damping: 25,
-        restDelta: 0.0001,
-    });
+    // No scroll-driven animation - animation only plays on page load
 
-    // Transform scroll progress to frame index
-    const frameProgress = useTransform(smoothProgress, [0, 1], [0, TOTAL_FRAMES - 1]);
-
-    // Track when animation has started (user has scrolled)
-    const [hasScrolled, setHasScrolled] = useState(false);
-
-    // Preload all frames
+    // Lock scroll during intro animation
     useEffect(() => {
-        const loadImages = async () => {
-            const loaded: HTMLImageElement[] = [];
-            let loadedCount = 0;
+        if (!isAnimationLocked) return;
 
-            const imagePromises = Array.from({ length: TOTAL_FRAMES }, (_, i) => {
-                return new Promise<HTMLImageElement>((resolve, reject) => {
-                    const img = new Image();
-                    img.onload = () => {
-                        loadedCount++;
-                        setLoadProgress(Math.round((loadedCount / TOTAL_FRAMES) * 100));
-                        resolve(img);
-                    };
-                    img.onerror = () => {
-                        console.warn(`Failed to load frame ${i}`);
-                        reject(new Error(`Failed to load frame ${i}`));
-                        resolve(img);
-                    };
-                    img.src = `${FRAME_PATH}/${getFrameFilename(i)}`;
-                });
-            });
+        const preventScroll = (e: Event) => {
+            e.preventDefault();
+        };
 
-            try {
-                const results = await Promise.allSettled(imagePromises);
-                results.forEach((result) => {
-                    if (result.status === "fulfilled" && result.value.naturalWidth > 0) {
-                        loaded.push(result.value);
-                    }
-                });
+        // Lock all scroll methods
+        document.body.style.overflow = "hidden";
+        document.addEventListener("wheel", preventScroll, { passive: false });
+        document.addEventListener("touchmove", preventScroll, { passive: false });
 
-                if (loaded.length > 0) {
-                    setImages(loaded);
-                    setImgRatio(loaded[0].naturalWidth / loaded[0].naturalHeight);
-                    setIsLoading(false);
-                }
-            } catch (error) {
-                console.error("Error loading frames:", error);
-                setIsLoading(false);
+        return () => {
+            document.body.style.overflow = "";
+            document.removeEventListener("wheel", preventScroll);
+            document.removeEventListener("touchmove", preventScroll);
+        };
+    }, [isAnimationLocked]);
+
+    // Play intro animation automatically once images are loaded
+    useEffect(() => {
+        if (isLoading || images.length === 0 || introComplete) return;
+
+        let animationFrameId: number;
+
+        const playIntroAnimation = (timestamp: number) => {
+            if (!animationStartTimeRef.current) {
+                animationStartTimeRef.current = timestamp;
+            }
+
+            const elapsed = timestamp - animationStartTimeRef.current;
+            const progress = Math.min(elapsed / ANIMATION_DURATION_MS, 1);
+
+            // Use easeOutCubic for smooth deceleration
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const targetFrame = Math.floor(easedProgress * (TOTAL_FRAMES - 1));
+
+            setCurrentFrame(targetFrame);
+
+            if (progress < 1) {
+                animationFrameId = requestAnimationFrame(playIntroAnimation);
+            } else {
+                // Animation complete - unlock scroll
+                setIntroComplete(true);
+                setIsAnimationLocked(false);
             }
         };
 
-        loadImages();
+        // Small delay to ensure smooth start
+        const startDelay = setTimeout(() => {
+            animationFrameId = requestAnimationFrame(playIntroAnimation);
+        }, 500);
+
+        return () => {
+            clearTimeout(startDelay);
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
+    }, [isLoading, images.length, introComplete]);
+
+    // Load a single image and return a promise
+    const loadImage = (index: number): Promise<HTMLImageElement> => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = () => reject(new Error(`Failed to load frame ${index}`));
+            img.src = `${FRAME_PATH}/${getFrameFilename(index)}`;
+        });
+    };
+
+    // Progressive loading: critical frames first, then background load the rest
+    useEffect(() => {
+        const loadFrames = async () => {
+            const allImages: HTMLImageElement[] = new Array(TOTAL_FRAMES);
+            let loadedCount = 0;
+
+            // Phase 1: Load critical frames (first 30) for fast initial render
+            const criticalPromises = Array.from({ length: CRITICAL_FRAMES }, (_, i) =>
+                loadImage(i).then(img => {
+                    allImages[i] = img;
+                    loadedCount++;
+                    setLoadProgress(Math.round((loadedCount / CRITICAL_FRAMES) * 100));
+                    return img;
+                }).catch(() => null)
+            );
+
+            await Promise.all(criticalPromises);
+
+            // Set initial images and show content
+            if (allImages[0]) {
+                setImgRatio(allImages[0].naturalWidth / allImages[0].naturalHeight);
+            }
+            setImages([...allImages]);
+            setIsLoading(false);
+
+            // Phase 2: Load remaining frames in background using requestIdleCallback
+            const loadRemainingFrames = async () => {
+                for (let i = CRITICAL_FRAMES; i < TOTAL_FRAMES; i++) {
+                    try {
+                        const img = await loadImage(i);
+                        allImages[i] = img;
+                        // Batch update every 20 frames to reduce re-renders
+                        if ((i + 1) % 20 === 0 || i === TOTAL_FRAMES - 1) {
+                            setImages([...allImages]);
+                        }
+                    } catch {
+                        // Skip failed frames
+                    }
+                }
+            };
+
+            // Use requestIdleCallback for non-blocking background loading
+            if ('requestIdleCallback' in window) {
+                (window as Window).requestIdleCallback(() => loadRemainingFrames());
+            } else {
+                setTimeout(loadRemainingFrames, 100);
+            }
+        };
+
+        loadFrames();
     }, []);
 
     // Show text immediately after loading
@@ -163,19 +232,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
         [images]
     );
 
-    // Update frame based on scroll progress with smooth interpolation
-    useMotionValueEvent(frameProgress, "change", (latest) => {
-        const frameIndex = Math.min(
-            Math.max(Math.round(latest), 0),
-            TOTAL_FRAMES - 1
-        );
-        if (frameIndex !== currentFrame) {
-            setCurrentFrame(frameIndex);
-            if (!hasScrolled && frameIndex > 0) {
-                setHasScrolled(true);
-            }
-        }
-    });
+    // Animation is controlled by intro playback only, not scroll
 
     // Draw current frame
     useEffect(() => {
@@ -238,10 +295,10 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                 </div>
             )}
 
-            {/* Scroll-driven animation container - Extended height for scroll space */}
-            <div ref={containerRef} className="relative h-[200vh] bg-[#0a0a0a]">
-                {/* Sticky hero that stays fixed while scrolling through the container */}
-                <div className="sticky top-0 h-screen overflow-hidden flex flex-col md:block justify-center">
+            {/* Hero container - fixed height, normal scroll after intro */}
+            <div ref={containerRef} className="relative h-screen bg-[#0a0a0a]">
+                {/* Hero content */}
+                <div className="relative h-full overflow-hidden flex flex-col md:block justify-center">
 
                     {/* MOBILE: Title at top - with padding to separate from header */}
                     <motion.div
@@ -251,7 +308,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <motion.h1
-                            className="text-[clamp(1.5rem,7vw,2.5rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
+                            className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -268,7 +325,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                             OPERACIONES
                         </motion.h1>
                         <motion.h1
-                            className="text-[clamp(1.5rem,7vw,2.5rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
+                            className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
@@ -285,7 +342,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                             QUE SOSTIENEN
                         </motion.h1>
                         <motion.h1
-                            className="text-[clamp(1.5rem,7vw,2.5rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
+                            className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
