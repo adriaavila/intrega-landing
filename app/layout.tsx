@@ -54,21 +54,12 @@ export const metadata: Metadata = {
     siteName: "INTEGRA",
     locale: "es_ES",
     type: "website",
-    images: [
-      {
-        url: "/integra-logo.svg",
-        width: 800,
-        height: 600,
-        alt: "INTEGRA Logo",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
     description:
       "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
-    images: ["/integra-logo.svg"],
   },
   robots: {
     index: true,
