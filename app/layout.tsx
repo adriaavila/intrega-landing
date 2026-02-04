@@ -23,8 +23,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Consultoría y Servicios para Hospitalidad & Retail",
-    template: "%s | Integra",
+    default: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
+    template: "%s | INTEGRA",
   },
   description:
     "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
@@ -46,28 +46,28 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Consultoría y Servicios para Hospitalidad & Retail",
+    title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
     description:
       "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
     url: "https://intrega-landing.vercel.app/",
-    siteName: "Integra",
+    siteName: "INTEGRA",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "/og/integra-hospitality-retail.png",
-        width: 1200,
-        height: 630,
-        alt: "Integra - Consultoría y Servicios",
+        url: "/integra-logo.svg",
+        width: 800,
+        height: 600,
+        alt: "INTEGRA Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consultoría y Servicios para Hospitalidad & Retail",
+    title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
     description:
       "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
-    images: ["/og/integra-hospitality-retail.png"],
+    images: ["/integra-logo.svg"],
   },
   robots: {
     index: true,
