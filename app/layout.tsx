@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,39 +17,76 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#4A4063",
+};
+
 export const metadata: Metadata = {
-  title: "INTEGRA — Sistemas para la continuidad operativa",
+  title: {
+    default: "Consultoría y Servicios para Hospitalidad & Retail",
+    template: "%s | Integra",
+  },
   description:
-    "Auditamos y ejecutamos sistemas operativos para empresas que han perdido el control del margen. Recupera visibilidad, eficiencia y rentabilidad con arquitectura de procesos y automatización digital.",
+    "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
   keywords: [
-    "auditoría operativa",
-    "sistemas operativos empresariales",
-    "automatización de procesos",
-    "control de margen",
-    "eficiencia operativa",
-    "consultoría de operaciones",
-    "arquitectura de sistemas",
+    "hospitalidad",
+    "retail",
+    "consultoría operativa",
+    "gestión de restaurantes",
+    "optimización de procesos",
+    "auditoría de servicios",
+    "rentabilidad hotelera",
+    "control de costos",
   ],
-  authors: [{ name: "INTEGRA" }],
+  authors: [{ name: "Integra" }],
+  creator: "Integra",
+  publisher: "Integra",
+  metadataBase: new URL("https://intrega-landing.vercel.app/"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Consultoría y Servicios para Hospitalidad & Retail",
+    description:
+      "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
+    url: "https://intrega-landing.vercel.app/",
+    siteName: "Integra",
+    locale: "es_ES",
+    type: "website",
+    images: [
+      {
+        url: "/og/integra-hospitality-retail.png",
+        width: 1200,
+        height: 630,
+        alt: "Integra - Consultoría y Servicios",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Consultoría y Servicios para Hospitalidad & Retail",
+    description:
+      "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
+    images: ["/og/integra-hospitality-retail.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: "/favicon.svg",
   },
-  openGraph: {
-    title: "INTEGRA — Sistemas para la continuidad operativa",
-    description:
-      "Auditamos y ejecutamos sistemas operativos para empresas que han perdido el control del margen. Integridad operativa = Rentabilidad.",
-    type: "website",
-    siteName: "INTEGRA",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "INTEGRA — Sistemas para la continuidad operativa",
-    description:
-      "Auditamos y ejecutamos sistemas operativos para empresas que han perdido el control del margen.",
-  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -61,6 +99,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans`}
       >
+        <ServiceWorkerRegistration />
         <Header />
         {children}
         <Footer />

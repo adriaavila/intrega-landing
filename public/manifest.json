@@ -1,0 +1,31 @@
+{
+    "name": "INTEGRA — Sistemas para la continuidad operativa",
+    "short_name": "INTEGRA",
+    "description": "Auditamos y ejecutamos sistemas operativos para empresas que han perdido el control del margen.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A0A0A",
+    "theme_color": "#4A4063",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-512x512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "productivity"
+    ],
+    "lang": "es",
+    "dir": "ltr"
+}

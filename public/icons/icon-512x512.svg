@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Background circle with brand color -->
+  <circle cx="256" cy="256" r="240" fill="#4A4063"/>
+  
+  <!-- The stylized "I" letterform -->
+  <rect x="208" y="112" width="96" height="288" rx="16" fill="#F5F5F5"/>
+  
+  <!-- Top bar -->
+  <rect x="208" y="112" width="160" height="80" rx="16" fill="#F5F5F5"/>
+  
+  <!-- Bottom bar -->
+  <rect x="144" y="320" width="160" height="80" rx="16" fill="#F5F5F5"/>
+  
+  <!-- Integration dots -->
+  <circle cx="400" cy="152" r="32" fill="#C8C6D7"/>
+  <circle cx="112" cy="360" r="32" fill="#C8C6D7"/>
+</svg>
