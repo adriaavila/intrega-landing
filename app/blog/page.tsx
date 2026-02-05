@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { blogPosts } from "../../lib/data";
 
 export default function Blog() {
     return (
@@ -24,18 +25,59 @@ export default function Blog() {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-                            Próximamente: análisis, casos de estudio y reflexiones sobre
-                            operaciones, sistemas y alto rendimiento.
+                            Análisis, casos de estudio y reflexiones sobre operaciones,
+                            sistemas y alto rendimiento.
                         </p>
-
-                        {/* Coming Soon Badge */}
-                        <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#4A4063]/20 border border-[#4A4063]/40 rounded-full">
-                            <span className="w-2 h-2 bg-[#C8C6D7] rounded-full animate-pulse" />
-                            <span className="font-mono text-sm text-[#C8C6D7]">
-                                En desarrollo
-                            </span>
-                        </div>
                     </motion.div>
+
+                    {/* Blog Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                        {blogPosts.map((post, index) => (
+                            <motion.div
+                                key={post.slug}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group"
+                            >
+                                <Link href={`/blog/${post.slug}`} className="block h-full">
+                                    <article className="h-full p-8 border border-[#4A4063]/20 rounded-2xl bg-[#4A4063]/5 hover:bg-[#4A4063]/10 transition-colors duration-300">
+                                        <div className="flex items-center gap-4 text-xs font-mono text-[#C8C6D7] mb-4">
+                                            <span>{post.date}</span>
+                                            <span>•</span>
+                                            <span>{post.readTime} read</span>
+                                            <span>•</span>
+                                            <span className="text-[#a49bbd] uppercase">
+                                                {post.category}
+                                            </span>
+                                        </div>
+                                        <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-[#C8C6D7] transition-colors">
+                                            {post.title}
+                                        </h2>
+                                        <p className="text-white/60 mb-6 line-clamp-3">
+                                            {post.excerpt}
+                                        </p>
+                                        <div className="flex items-center text-[#C8C6D7] font-semibold group-hover:translate-x-1 transition-transform">
+                                            Leer más
+                                            <svg
+                                                className="w-4 h-4 ml-2"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </article>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -49,7 +91,8 @@ export default function Blog() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <p className="text-white/60 text-lg mb-8">
-                            ¿Quieres saber más sobre cómo trabajamos? Conoce nuestro manifiesto.
+                            ¿Quieres saber más sobre cómo trabajamos? Conoce nuestro
+                            manifiesto.
                         </p>
 
                         <motion.div

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { resources } from "../../lib/data";
 
 export default function Recursos() {
     return (
@@ -24,18 +25,58 @@ export default function Recursos() {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-                            Próximamente: recursos técnicos, plantillas y frameworks para
-                            optimizar tu operación.
+                            Recursos técnicos, plantillas y frameworks para optimizar tu
+                            operación.
                         </p>
-
-                        {/* Coming Soon Badge */}
-                        <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#4A4063]/20 border border-[#4A4063]/40 rounded-full">
-                            <span className="w-2 h-2 bg-[#C8C6D7] rounded-full animate-pulse" />
-                            <span className="font-mono text-sm text-[#C8C6D7]">
-                                En desarrollo
-                            </span>
-                        </div>
                     </motion.div>
+
+                    {/* Resources Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+                        {resources.map((resource, index) => (
+                            <motion.div
+                                key={resource.slug}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group relative"
+                            >
+                                <Link href={`/recursos/${resource.slug}`} className="block h-full">
+                                    <div className="h-full p-8 border border-[#4A4063]/20 rounded-2xl bg-[#4A4063]/5 hover:bg-[#4A4063]/10 transition-all duration-300 hover:-translate-y-1">
+                                        <div className="flex items-center justify-between mb-6">
+                                            <span className="inline-flex items-center px-3 py-1 bg-[#4A4063]/20 border border-[#4A4063]/40 rounded-full text-xs font-mono text-[#C8C6D7]">
+                                                {resource.type}
+                                            </span>
+                                            <svg
+                                                className="w-5 h-5 text-[#C8C6D7] opacity-0 group-hover:opacity-100 transition-opacity"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                                />
+                                            </svg>
+                                        </div>
+
+                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C8C6D7] transition-colors">
+                                            {resource.title}
+                                        </h3>
+
+                                        <p className="text-white/60 text-sm mb-6">
+                                            {resource.description}
+                                        </p>
+
+                                        <div className="flex items-center text-[#C8C6D7] text-sm font-semibold mt-auto">
+                                            Ver detalle
+                                        </div>
+                                    </div>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
