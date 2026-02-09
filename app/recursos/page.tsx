@@ -41,9 +41,9 @@ export default function Recursos() {
                                 className="group relative"
                             >
                                 <Link href={`/recursos/${resource.slug}`} className="block h-full">
-                                    <div className="h-full p-8 border border-[#4A4063]/20 rounded-2xl bg-[#4A4063]/5 hover:bg-[#4A4063]/10 transition-all duration-300 hover:-translate-y-1">
+                                    <div className="h-full p-8 border border-[#6D28D9]/20 rounded-2xl bg-[#6D28D9]/5 hover:bg-[#6D28D9]/10 transition-all duration-300 hover:-translate-y-1">
                                         <div className="flex items-center justify-between mb-6">
-                                            <span className="inline-flex items-center px-3 py-1 bg-[#4A4063]/20 border border-[#4A4063]/40 rounded-full text-xs font-mono text-[#C8C6D7]">
+                                            <span className="inline-flex items-center px-3 py-1 bg-[#6D28D9]/20 border border-[#6D28D9]/40 rounded-full text-xs font-mono text-[#C8C6D7]">
                                                 {resource.type}
                                             </span>
                                             <svg
@@ -99,7 +99,7 @@ export default function Recursos() {
                         >
                             <Link
                                 href="/diagnostico"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#4A4063] text-[#F5F5F5] font-semibold text-lg rounded-full
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
                            active:translate-y-0"

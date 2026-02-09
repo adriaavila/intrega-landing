@@ -1,17 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Vivid Gradient for the icon -->
+    <linearGradient id="vividGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#6D28D9"/>
+    </linearGradient>
+    <!-- Subtle inner shadow -->
+    <filter id="innerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
   <!-- Background circle with brand color -->
-  <circle cx="16" cy="16" r="15" fill="#4A4063"/>
+  <circle cx="256" cy="256" r="240" fill="url(#vividGradient)"/>
   
-  <!-- The stylized "I" letterform - simplified for favicon -->
-  <rect x="13" y="7" width="6" height="18" rx="1" fill="#F5F5F5"/>
+  <!-- Outer ring - represents integration/continuity -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.3"/>
   
-  <!-- Top bar -->
-  <rect x="13" y="7" width="10" height="5" rx="1" fill="#F5F5F5"/>
+  <!-- The "I" letterform - bold and geometric, center of INTEGRA -->
+  <rect x="228" y="120" width="56" height="272" rx="4" fill="#FFFFFF"/>
   
-  <!-- Bottom bar -->
-  <rect x="9" y="20" width="10" height="5" rx="1" fill="#F5F5F5"/>
+  <!-- Horizontal bars creating the abstract "connection" symbol -->
+  <!-- Top bar - flowing right -->
+  <rect x="228" y="120" width="120" height="56" rx="4" fill="#FFFFFF"/>
   
-  <!-- Integration dots -->
-  <circle cx="25" cy="9.5" r="2" fill="#C8C6D7"/>
-  <circle cx="7" cy="22.5" r="2" fill="#C8C6D7"/>
+  <!-- Bottom bar - flowing left -->
+  <rect x="164" y="336" width="120" height="56" rx="4" fill="#FFFFFF"/>
+  
+  <!-- Integration dots - representing system connections -->
+  <circle cx="370" cy="148" r="16" fill="#A78BFA"/>
+  <circle cx="142" cy="364" r="16" fill="#A78BFA"/>
+  
+  <!-- Subtle accent line connecting the dots - the "integration" -->
+  <line x1="370" y1="164" x2="142" y2="348" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
 </svg>

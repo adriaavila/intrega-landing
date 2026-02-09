@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -19,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#4A4063",
+  themeColor: "#6D28D9",
 };
 
 export const metadata: Metadata = {
@@ -95,6 +96,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>

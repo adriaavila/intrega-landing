@@ -61,7 +61,7 @@ export default function Home() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: i * 0.15 }}
                   >
-                    <span className="font-mono text-sm text-[#4A4063] font-semibold">
+                    <span className="font-mono text-sm text-[#6D28D9] font-semibold">
                       {item.num}
                     </span>
                     <div>
@@ -113,7 +113,7 @@ export default function Home() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: i * 0.15 }}
                   >
-                    <span className="font-mono text-lg md:text-xl text-[#4A4063] font-bold tabular-nums">
+                    <span className="font-mono text-lg md:text-xl text-[#6D28D9] font-bold tabular-nums">
                       {step.number}
                     </span>
                     <div className="flex-1">
@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* MANIFIESTO Section - Full Authority Background */}
-        <section id="manifiesto" className="relative bg-[#4A4063] py-24 md:py-32 px-4 md:px-8">
+        <section id="manifiesto" className="relative bg-[#6D28D9] py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -172,7 +172,7 @@ export default function Home() {
               {/* CTA Button - Inverted colors */}
               <motion.a
                 href="/diagnostico"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#F5F5F5] text-[#4A4063] font-semibold text-lg rounded-full
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#F5F5F5] text-[#6D28D9] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
                            active:translate-y-0"

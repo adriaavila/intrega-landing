@@ -36,7 +36,7 @@ export default function Nosotros() {
             <div className="w-full h-px bg-[#C8C6D7]/20" />
 
             {/* Core Belief Section */}
-            <section className="relative bg-[#4A4063] py-24 md:py-32 px-4 md:px-8">
+            <section className="relative bg-[#6D28D9] py-24 md:py-32 px-4 md:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
@@ -139,7 +139,7 @@ export default function Nosotros() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            <span className="inline-block font-mono text-sm text-[#4A4063] font-bold mb-4">
+                            <span className="inline-block font-mono text-sm text-[#6D28D9] font-bold mb-4">
                                 01
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -167,7 +167,7 @@ export default function Nosotros() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7, delay: 0.15 }}
                         >
-                            <span className="inline-block font-mono text-sm text-[#4A4063] font-bold mb-4">
+                            <span className="inline-block font-mono text-sm text-[#6D28D9] font-bold mb-4">
                                 02
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -220,7 +220,7 @@ export default function Nosotros() {
                         >
                             <Link
                                 href="/diagnostico"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#4A4063] text-[#F5F5F5] font-semibold text-lg rounded-full
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
                            active:translate-y-0"

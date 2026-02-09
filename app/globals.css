@@ -7,10 +7,15 @@
   --muted: #888888;
 
   /* INTEGRA Design System v2.0 */
-  --deep-authority: #4A4063;
+  --deep-authority: #6D28D9;
   --technical-softness: #C8C6D7;
   --base-light: #F5F5F5;
   --base-dark: #0E0E0E;
+
+  /* Brand Vivid Colors (from Logo) */
+  --brand-primary: #6D28D9;
+  --brand-secondary: #8B5CF6;
+  --brand-accent: #A78BFA;
 }
 
 @theme inline {
@@ -20,6 +25,11 @@
   --color-muted: var(--muted);
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), monospace;
+
+  /* Brand Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
 }
 
 /* Base styles */

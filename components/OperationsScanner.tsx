@@ -313,7 +313,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             style={{
-                                background: "linear-gradient(135deg, #ffffff 0%, #C8C6D7 50%, #ffffff 100%)",
+                                backgroundImage: "linear-gradient(135deg, #ffffff 0%, #C8C6D7 50%, #ffffff 100%)",
                                 backgroundSize: "200% 200%",
                                 backgroundClip: "text",
                                 WebkitBackgroundClip: "text",
@@ -330,7 +330,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
                             style={{
-                                background: "linear-gradient(135deg, #C8C6D7 0%, #4A4063 50%, #C8C6D7 100%)",
+                                backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 50%, #C8C6D7 100%)",
                                 backgroundSize: "200% 200%",
                                 backgroundClip: "text",
                                 WebkitBackgroundClip: "text",
@@ -347,7 +347,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                             animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
                             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                             style={{
-                                background: "linear-gradient(135deg, #C8C6D7 0%, #4A4063 50%, #C8C6D7 100%)",
+                                backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 50%, #C8C6D7 100%)",
                                 backgroundSize: "200% 200%",
                                 backgroundClip: "text",
                                 WebkitBackgroundClip: "text",
@@ -399,7 +399,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                     animate={{ y: textVisible ? 0 : 30, opacity: textVisible ? 1 : 0 }}
                                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                                     style={{
-                                        background: "linear-gradient(135deg, #ffffff 0%, #C8C6D7 40%, #ffffff 80%, #F5F5F5 100%)",
+                                        backgroundImage: "linear-gradient(135deg, #ffffff 0%, #C8C6D7 40%, #ffffff 80%, #F5F5F5 100%)",
                                         backgroundSize: "300% 300%",
                                         backgroundClip: "text",
                                         WebkitBackgroundClip: "text",
@@ -416,7 +416,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                     animate={{ y: textVisible ? 0 : 30, opacity: textVisible ? 1 : 0 }}
                                     transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
                                     style={{
-                                        background: "linear-gradient(135deg, #C8C6D7 0%, #4A4063 30%, #6A5A7D 60%, #C8C6D7 100%)",
+                                        backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 30%, #6A5A7D 60%, #C8C6D7 100%)",
                                         backgroundSize: "300% 300%",
                                         backgroundClip: "text",
                                         WebkitBackgroundClip: "text",
@@ -433,7 +433,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                     animate={{ y: textVisible ? 0 : 30, opacity: textVisible ? 1 : 0 }}
                                     transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                                     style={{
-                                        background: "linear-gradient(135deg, #C8C6D7 0%, #4A4063 30%, #6A5A7D 60%, #C8C6D7 100%)",
+                                        backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 30%, #6A5A7D 60%, #C8C6D7 100%)",
                                         backgroundSize: "300% 300%",
                                         backgroundClip: "text",
                                         WebkitBackgroundClip: "text",
@@ -476,7 +476,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                     <span
                                         className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"
                                         style={{
-                                            background: "linear-gradient(180deg, #FFFFFF 0%, #C8C6D7 100%)",
+                                            backgroundImage: "linear-gradient(180deg, #FFFFFF 0%, #C8C6D7 100%)",
                                             backgroundClip: "text",
                                             WebkitBackgroundClip: "text",
                                             WebkitTextFillColor: "transparent",
@@ -485,7 +485,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                     >
                                         {word}
                                     </span>
-                                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#4A4063]">
+                                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--brand-primary)]">
                                         .
                                     </span>
                                 </motion.div>

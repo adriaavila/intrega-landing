@@ -118,10 +118,10 @@ export function Header() {
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <circle cx="16" cy="16" r="15" fill={isScrolled ? "#4A4063" : "#F5F5F5"} />
-                            <rect x="13" y="7" width="6" height="18" rx="1" fill={isScrolled ? "#F5F5F5" : "#4A4063"} />
-                            <rect x="13" y="7" width="10" height="5" rx="1" fill={isScrolled ? "#F5F5F5" : "#4A4063"} />
-                            <rect x="9" y="20" width="10" height="5" rx="1" fill={isScrolled ? "#F5F5F5" : "#4A4063"} />
+                            <circle cx="16" cy="16" r="15" fill={isScrolled ? "var(--brand-primary)" : "#F5F5F5"} />
+                            <rect x="13" y="7" width="6" height="18" rx="1" fill={isScrolled ? "#F5F5F5" : "var(--brand-primary)"} />
+                            <rect x="13" y="7" width="10" height="5" rx="1" fill={isScrolled ? "#F5F5F5" : "var(--brand-primary)"} />
+                            <rect x="9" y="20" width="10" height="5" rx="1" fill={isScrolled ? "#F5F5F5" : "var(--brand-primary)"} />
                             <circle cx="25" cy="9.5" r="2" fill="#C8C6D7" />
                             <circle cx="7" cy="22.5" r="2" fill="#C8C6D7" />
                         </svg>
@@ -173,7 +173,7 @@ export function Header() {
                         href="/diagnostico"
                         className={`hidden md:inline-flex ml-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${isScrolled
                             ? "bg-[#0a0a0a] text-white hover:bg-[#1a1a1a]"
-                            : "bg-white/95 text-[#0a0a0a] hover:bg-white"
+                            : "bg-white/95 text-[var(--brand-primary)] hover:bg-white"
                             }`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -232,7 +232,7 @@ export function Header() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
-                                    className="w-full py-4 bg-[#4A4063] text-white text-center font-semibold rounded-full hover:bg-[#5a5073] transition-colors"
+                                    className="w-full py-4 bg-[var(--brand-primary)] text-white text-center font-semibold rounded-full hover:bg-[var(--brand-secondary)] transition-colors"
                                 >
                                     Solicitar Diagnóstico
                                 </motion.a>

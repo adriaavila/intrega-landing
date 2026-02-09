@@ -186,8 +186,8 @@ export default function DiagnosticoPage() {
                                     className="peer sr-only"
                                 />
                                 <div className="w-5 h-5 rounded-full border-2 border-white/30 flex items-center justify-center
-                                    peer-checked:border-[#4A4063] peer-checked:bg-[#4A4063]/20 transition-all">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-[#4A4063] opacity-0 peer-checked:opacity-100 transition-opacity" />
+                                    peer-checked:border-[#6D28D9] peer-checked:bg-[#6D28D9]/20 transition-all">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-[#6D28D9] opacity-0 peer-checked:opacity-100 transition-opacity" />
                                 </div>
                                 <span className="text-white/70 group-hover:text-white transition-colors">Email</span>
                             </label>

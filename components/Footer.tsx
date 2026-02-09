@@ -16,12 +16,12 @@ export function Footer() {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <circle cx="16" cy="16" r="15" fill="#4A4063" />
+                                <circle cx="16" cy="16" r="15" fill="var(--brand-primary)" />
                                 <rect x="13" y="7" width="6" height="18" rx="1" fill="#F5F5F5" />
                                 <rect x="13" y="7" width="10" height="5" rx="1" fill="#F5F5F5" />
                                 <rect x="9" y="20" width="10" height="5" rx="1" fill="#F5F5F5" />
-                                <circle cx="25" cy="9.5" r="2" fill="#C8C6D7" />
-                                <circle cx="7" cy="22.5" r="2" fill="#C8C6D7" />
+                                <circle cx="25" cy="9.5" r="2" fill="var(--brand-accent)" />
+                                <circle cx="7" cy="22.5" r="2" fill="var(--brand-accent)" />
                             </svg>
                             <h3 className="font-mono text-sm tracking-[0.3em] text-white/60 uppercase">
                                 INTEGRA

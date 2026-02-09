@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-6">
         Al igual que la deuda técnica en el software, la <strong>deuda operativa</strong> se acumula silenciosamente. Al principio es manejable: un proceso manual por aquí, una excepción por allá. Pero con el tiempo, estos "parches" se convierten en una maraña que frena cualquier intento de innovación.
       </p>
-      <ul class="list-disc list-inside mb-8 space-y-3 text-white/80 pl-4 border-l-2 border-[#4A4063]">
+      <ul class="list-disc list-inside mb-8 space-y-3 text-white/80 pl-4 border-l-2 border-[#6D28D9]">
         <li><strong>Dependencia de Héroes:</strong> Tu negocio funciona porque personas clave (usualmente tú) apagan fuegos heroicamente cada día.</li>
         <li><strong>Erosión del Margen:</strong> Vendes más, pero al final del mes queda menos dinero. Los costos de corrección y retrabajo se comen la ganancia.</li>
         <li><strong>Datos Rotos:</strong> Tienes tres versiones de la verdad. Finanzas dice una cosa, Operaciones otra y el Inventario una tercera.</li>
@@ -73,7 +73,7 @@ export const blogPosts: BlogPost[] = [
         Una operación eficiente se refleja directamente en la caja. Reducir el ciclo de conversión de efectivo, minimizar inventarios ociosos y optimizar la logística no son "mejoras"; son imperativos de supervivencia.
       </p>
 
-      <div class="bg-[#4A4063]/10 border border-[#4A4063]/30 p-8 rounded-xl my-12">
+      <div class="bg-[#6D28D9]/10 border border-[#6D28D9]/30 p-8 rounded-xl my-12">
         <h4 class="text-xl font-bold text-white mb-4">¿Tu operación está lista para escalar?</h4>
         <p class="mb-4 text-white/80">
           No adivines. Realiza nuestro diagnóstico operativo gratuito y descubre los puntos ciegos que están frenando tu crecimiento.

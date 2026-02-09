@@ -43,7 +43,7 @@ export default function ResourceDetail() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center px-3 py-1 bg-[#4A4063]/20 border border-[#4A4063]/40 rounded-full text-xs font-mono text-[#C8C6D7] mb-6">
+                        <div className="inline-flex items-center px-3 py-1 bg-[#6D28D9]/20 border border-[#6D28D9]/40 rounded-full text-xs font-mono text-[#C8C6D7] mb-6">
                             {resource.type}
                         </div>
 
@@ -93,7 +93,7 @@ export default function ResourceDetail() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="p-8 md:p-12 border border-[#4A4063]/20 rounded-2xl bg-[#4A4063]/5"
+                        className="p-8 md:p-12 border border-[#6D28D9]/20 rounded-2xl bg-[#6D28D9]/5"
                     >
                         <h2 className="text-2xl font-bold text-white mb-6">
                             ¿Qué incluye este recurso?

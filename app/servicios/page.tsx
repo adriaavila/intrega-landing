@@ -97,9 +97,9 @@ export default function Servicios() {
                         >
                             <Link
                                 href="/diagnostico"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#4A4063] text-[#F5F5F5] font-semibold text-lg rounded-full
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                                 transition-all duration-300 ease-out
-                                hover:bg-[#5a5073] hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-[#4A4063]/30
+                                hover:bg-[#8B5CF6] hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-[#6D28D9]/30
                                 active:translate-y-0"
                             >
                                 Solicitar diagnóstico gratuito
@@ -152,14 +152,14 @@ export default function Servicios() {
                             <motion.div
                                 key={i}
                                 className="group relative bg-[#0e0e0e] border border-[#C8C6D7]/10 rounded-2xl p-6 md:p-8 
-                                           hover:border-[#4A4063]/50 hover:bg-[#0f0f12] transition-all duration-500"
+                                           hover:border-[#6D28D9]/50 hover:bg-[#0f0f12] transition-all duration-500"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
                             >
                                 {/* Number */}
-                                <span className="font-mono text-sm text-[#4A4063] font-bold mb-4 block">
+                                <span className="font-mono text-sm text-[#6D28D9] font-bold mb-4 block">
                                     {service.number}
                                 </span>
 
@@ -182,7 +182,7 @@ export default function Servicios() {
                                 <ul className="space-y-2 mb-6">
                                     {service.items.map((item, j) => (
                                         <li key={j} className="flex items-start gap-2 text-sm text-white/60">
-                                            <span className="text-[#4A4063] mt-0.5">•</span>
+                                            <span className="text-[#6D28D9] mt-0.5">•</span>
                                             {item}
                                         </li>
                                     ))}
@@ -219,7 +219,7 @@ export default function Servicios() {
                     {/* Timeline - Horizontal on desktop, vertical on mobile */}
                     <div className="relative">
                         {/* Connecting line */}
-                        <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-[#4A4063] via-[#C8C6D7]/30 to-[#4A4063]" />
+                        <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-[#6D28D9] via-[#C8C6D7]/30 to-[#6D28D9]" />
 
                         <div className="grid md:grid-cols-4 gap-8 md:gap-4">
                             {processSteps.map((step, i) => (
@@ -233,8 +233,8 @@ export default function Servicios() {
                                 >
                                     {/* Step circle */}
                                     <div className="relative z-10 w-16 h-16 flex items-center justify-center rounded-full 
-                                                    bg-[#4A4063] text-white font-mono font-bold text-lg mb-0 md:mb-4 mr-4 md:mr-0
-                                                    shadow-lg shadow-[#4A4063]/20">
+                                                    bg-[#6D28D9] text-white font-mono font-bold text-lg mb-0 md:mb-4 mr-4 md:mr-0
+                                                    shadow-lg shadow-[#6D28D9]/20">
                                         {step.num}
                                     </div>
                                     <div className="flex-1 md:flex-none">
@@ -273,14 +273,14 @@ export default function Servicios() {
                     <div className="grid md:grid-cols-2 gap-6">
                         {/* Trabajamos con */}
                         <motion.div
-                            className="bg-[#0e0e0e] border border-[#4A4063]/30 rounded-2xl p-8"
+                            className="bg-[#0e0e0e] border border-[#6D28D9]/30 rounded-2xl p-8"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-10 h-10 rounded-full bg-[#4A4063] flex items-center justify-center">
+                                <div className="w-10 h-10 rounded-full bg-[#6D28D9] flex items-center justify-center">
                                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -289,15 +289,15 @@ export default function Servicios() {
                             </div>
                             <ul className="space-y-3 text-white/70">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4A4063] mt-1">•</span>
+                                    <span className="text-[#6D28D9] mt-1">•</span>
                                     Empresas con ventas reales buscando orden técnico
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4A4063] mt-1">•</span>
+                                    <span className="text-[#6D28D9] mt-1">•</span>
                                     Equipos dispuestos a cambiar procesos
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-[#4A4063] mt-1">•</span>
+                                    <span className="text-[#6D28D9] mt-1">•</span>
                                     Líderes que priorizan datos sobre intuición
                                 </li>
                             </ul>
@@ -339,7 +339,7 @@ export default function Servicios() {
             </section>
 
             {/* Final CTA Section */}
-            <section className="relative bg-[#4A4063] py-24 md:py-32 px-4 md:px-8">
+            <section className="relative bg-[#6D28D9] py-24 md:py-32 px-4 md:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
@@ -365,7 +365,7 @@ export default function Servicios() {
                         >
                             <Link
                                 href="/diagnostico"
-                                className="inline-flex items-center gap-3 px-10 py-5 bg-[#F5F5F5] text-[#4A4063] font-bold text-lg rounded-full
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-[#F5F5F5] text-[#6D28D9] font-bold text-lg rounded-full
                                 transition-all duration-300 ease-out
                                 hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/30
                                 active:translate-y-0"

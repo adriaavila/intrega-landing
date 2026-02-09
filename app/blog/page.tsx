@@ -41,7 +41,7 @@ export default function Blog() {
                                 className="group"
                             >
                                 <Link href={`/blog/${post.slug}`} className="block h-full">
-                                    <article className="h-full p-8 border border-[#4A4063]/20 rounded-2xl bg-[#4A4063]/5 hover:bg-[#4A4063]/10 transition-colors duration-300">
+                                    <article className="h-full p-8 border border-[#6D28D9]/20 rounded-2xl bg-[#6D28D9]/5 hover:bg-[#6D28D9]/10 transition-colors duration-300">
                                         <div className="flex items-center gap-4 text-xs font-mono text-[#C8C6D7] mb-4">
                                             <span>{post.date}</span>
                                             <span>•</span>
@@ -101,7 +101,7 @@ export default function Blog() {
                         >
                             <Link
                                 href="/nosotros"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#4A4063] text-[#F5F5F5] font-semibold text-lg rounded-full
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
                            active:translate-y-0"
