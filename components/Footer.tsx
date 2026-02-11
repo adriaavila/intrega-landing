@@ -28,7 +28,7 @@ export function Footer() {
                             </h3>
                         </Link>
                         <p className="text-white/40 text-sm max-w-xs">
-                            Sistemas para la continuidad operativa.
+                            Consultoría y transformación digital para hospitalidad y retail.
                         </p>
                     </div>
 
@@ -49,6 +49,9 @@ export function Footer() {
                                 <Link href="/blog" className="text-white/40 text-sm hover:text-white/70 transition-colors">
                                     Blog
                                 </Link>
+                                <Link href="/contacto" className="text-white/40 text-sm hover:text-white/70 transition-colors">
+                                    Contacto
+                                </Link>
                             </nav>
                         </div>
                     </div>
@@ -59,7 +62,7 @@ export function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/30 text-xs font-mono">
-                        © 2026 INTEGRA. Sistemas para la continuidad operativa.
+                        © 2026 INTEGRA. Consultoría y transformación digital para hospitalidad y retail.
                     </p>
                 </div>
             </div>

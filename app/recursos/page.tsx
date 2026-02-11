@@ -21,12 +21,12 @@ export default function Recursos() {
                         </span>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                            Herramientas y Guías
+                            Recursos Útiles
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-                            Recursos técnicos, plantillas y frameworks para optimizar tu
-                            operación.
+                            Guías, herramientas y artículos que te ayudan a entender mejor
+                            la digitalización de tu operación.
                         </p>
                     </motion.div>
 
@@ -98,7 +98,7 @@ export default function Recursos() {
                             whileTap={{ scale: 0.98 }}
                         >
                             <Link
-                                href="/diagnostico"
+                                href="/contacto"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20

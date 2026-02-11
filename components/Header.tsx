@@ -170,7 +170,7 @@ export function Header() {
 
                     {/* CTA Button - Hidden on mobile */}
                     <motion.a
-                        href="/diagnostico"
+                        href="/contacto"
                         className={`hidden md:inline-flex ml-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${isScrolled
                             ? "bg-[#0a0a0a] text-white hover:bg-[#1a1a1a]"
                             : "bg-white/95 text-[var(--brand-primary)] hover:bg-white"
@@ -178,7 +178,7 @@ export function Header() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                     >
-                        Diagnóstico
+                        Contacto
                     </motion.a>
                 </motion.nav>
             </header>
@@ -227,14 +227,14 @@ export function Header() {
 
                                 {/* CTA */}
                                 <motion.a
-                                    href="/diagnostico"
+                                    href="/contacto"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.4 }}
                                     className="w-full py-4 bg-[var(--brand-primary)] text-white text-center font-semibold rounded-full hover:bg-[var(--brand-secondary)] transition-colors"
                                 >
-                                    Solicitar Diagnóstico
+                                    Contacto
                                 </motion.a>
 
                                 {/* Footer info */}

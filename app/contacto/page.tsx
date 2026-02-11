@@ -73,10 +73,10 @@ export default function DiagnosticoPage() {
                         Volver al inicio
                     </Link>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Solicitar Diagnóstico
+                        Contáctanos
                     </h1>
                     <p className="text-white/60 text-lg max-w-md mx-auto">
-                        Cuéntanos sobre tu negocio y te ayudaremos a identificar oportunidades de mejora operativa.
+                        ¿Listo para empezar? Hablemos de tu negocio y tus retos concretos para diseñar un plan que funcione.
                     </p>
                 </div>
 
@@ -235,7 +235,7 @@ export default function DiagnosticoPage() {
                             active:bg-white/80 active:scale-[0.98]
                             mt-2"
                     >
-                        Solicitar Diagnóstico
+                        Enviar
                     </button>
                 </form>
 

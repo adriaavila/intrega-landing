@@ -28,8 +28,8 @@ export default function Home() {
       <OperationsScanner>
         {/* Content Sections - Normal page flow below hero animation */}
 
-        {/* EL PROBLEMA / DIAGNÓSTICO Section */}
-        <section id="radiografia" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
+        {/* EL DIAGNÓSTICO Section */}
+        <section id="diagnostico" className="relative bg-[#0a0a0a] py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -39,19 +39,19 @@ export default function Home() {
             >
               {/* Section label */}
               <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#C8C6D7] uppercase mb-6">
-                Radiografía
+                El diagnóstico
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-12">
-                Sin sistema, el crecimiento solo amplifica el desorden.
+                Cada día sin sistema le cuesta dinero a tu negocio.
               </h2>
 
               {/* Diagnostic grid with hover states */}
               <div className="grid gap-0 border border-[#C8C6D7]/20 divide-y divide-[#C8C6D7]/20">
                 {[
-                  { num: "01", label: "MARGEN", text: "El beneficio se diluye sin rastro." },
-                  { num: "02", label: "RIESGO", text: "La operación depende de personas, no de procesos." },
-                  { num: "03", label: "DATOS", text: "Decisiones tardías basadas en información incompleta." },
+                  { num: "01", label: "MARGEN", text: "Vendes más pero al final del mes no queda nada." },
+                  { num: "02", label: "RIESGO", text: "Si tu mejor empleado se va mañana, ¿sobrevive la operación?" },
+                  { num: "03", label: "DATOS", text: "Tres versiones de la verdad: finanzas dice una cosa, inventario otra." },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -97,13 +97,13 @@ export default function Home() {
               </span>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-12 md:mb-16">
-                Sistemas Reales.
+                Cómo te apoyamos.
               </h2>
               <div className="space-y-0 divide-y divide-[#C8C6D7]/10">
                 {[
-                  { number: "01", title: "Auditoría Operativa", desc: "Visibilidad real de P&L y flujos de caja." },
-                  { number: "02", title: "Arquitectura de Sistemas", desc: "Procesos lean y automatización digital." },
-                  { number: "03", title: "Ejecución Directa", desc: "Implementación junto al equipo hasta lograr la continuidad." },
+                  { number: "01", title: "Consultoría", desc: "Te escuchamos, entendemos tus retos y proponemos soluciones prácticas." },
+                  { number: "02", title: "Transformación digital", desc: "Tus procesos en herramientas que multiplican productividad." },
+                  { number: "03", title: "Integración de sistemas", desc: "Hacemos que tus sistemas hablen entre sí. Menos errores, menos pasos manuales." },
                 ].map((step, i) => (
                   <motion.div
                     key={i}
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* MANIFIESTO Section - Full Authority Background */}
+        {/* NUESTRO COMPROMISO Section - Full Authority Background */}
         <section id="manifiesto" className="relative bg-[#6D28D9] py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -142,19 +142,19 @@ export default function Home() {
             >
               {/* Section label */}
               <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#F5F5F5]/60 uppercase mb-8">
-                El Manifiesto
+                Nuestro compromiso
               </span>
 
               <blockquote className="text-2xl md:text-3xl lg:text-4xl text-[#F5F5F5] font-semibold leading-relaxed mb-12">
-                "No puede existir alto rendimiento sin salud operativa."
+                "No te dejamos en el punto de implementación. Te acompañamos hasta que todo funcione."
               </blockquote>
 
               {/* Key points */}
               <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 mb-12">
                 {[
-                  "Rigor antes que motivación.",
-                  "Recuperar control antes de escalar.",
-                  "La integridad operativa es rentabilidad."
+                  "Hoteles y restaurantes que ya operan sin fricción.",
+                  "Cadenas que conectaron todos sus sistemas.",
+                  "Negocios que redujeron tiempos de gestión un 40%."
                 ].map((point, i) => (
                   <motion.p
                     key={i}
@@ -171,7 +171,7 @@ export default function Home() {
 
               {/* CTA Button - Inverted colors */}
               <motion.a
-                href="/diagnostico"
+                href="/contacto"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#F5F5F5] text-[#6D28D9] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
@@ -179,7 +179,7 @@ export default function Home() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Solicitar diagnóstico operativo
+                Hablemos de tu negocio
                 <svg
                   className="w-5 h-5"
                   fill="none"

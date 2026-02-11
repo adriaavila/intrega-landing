@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     template: "%s | INTEGRA",
   },
   description:
-    "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
+    "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
   keywords: [
-    "hospitalidad",
-    "retail",
-    "consultoría operativa",
-    "gestión de restaurantes",
-    "optimización de procesos",
-    "auditoría de servicios",
-    "rentabilidad hotelera",
-    "control de costos",
+    "consultoría hospitalidad",
+    "transformación digital restaurantes",
+    "integración de sistemas retail",
+    "gestión operativa hoteles",
+    "automatización de procesos",
+    "soporte tecnológico hostelería",
+    "eficiencia operativa",
+    "digitalización de negocios",
   ],
   authors: [{ name: "Integra" }],
   creator: "Integra",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
     description:
-      "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
+      "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
     url: "https://intrega-landing.vercel.app/",
     siteName: "INTEGRA",
     locale: "es_ES",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
     description:
-      "Diseño y optimización de modelos de negocio con integridad operativa, enfoque en rentabilidad y control.",
+      "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
   },
   robots: {
     index: true,

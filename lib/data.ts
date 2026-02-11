@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
         <p class="mb-4 text-white/80">
           No adivines. Realiza nuestro diagnóstico operativo gratuito y descubre los puntos ciegos que están frenando tu crecimiento.
         </p>
-        <a href="/diagnostico" class="inline-block text-[#C8C6D7] font-bold border-b border-[#C8C6D7] hover:text-white transition-colors">
+        <a href="/contacto" class="inline-block text-[#C8C6D7] font-bold border-b border-[#C8C6D7] hover:text-white transition-colors">
           Solicitar Diagnóstico →
         </a>
       </div>

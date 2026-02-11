@@ -19,14 +19,14 @@ export default function Nosotros() {
                         </span>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                            De la recuperación al{" "}
-                            <span className="text-[#C8C6D7]">alto rendimiento</span> operativo.
+                            Socios estratégicos que{" "}
+                            <span className="text-[#C8C6D7]">salvan tu operación.</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-3xl leading-relaxed">
-                            La mayoría de las organizaciones no están rotas. Están desordenadas.
-                            Operan bajo presión constante, normalizan la urgencia y confunden
-                            sacrificio con compromiso.
+                            INTEGRA ayuda a empresas de hotelería, restaurantes, tiendas y cadenas
+                            de retail a modernizar sus procesos y sistemas. Nos enfocamos en que tus
+                            operaciones sean más ágiles, seguras y fáciles de gestionar.
                         </p>
                     </motion.div>
                 </div>
@@ -45,17 +45,17 @@ export default function Nosotros() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#F5F5F5]/60 uppercase mb-8">
-                            Nuestra Premisa
+                            Nuestra Filosofía
                         </span>
 
                         <blockquote className="text-2xl md:text-3xl lg:text-4xl text-[#F5F5F5] font-semibold leading-relaxed mb-8">
-                            "No puede existir alto rendimiento sin salud operativa."
+                            "Tu negocio merece funcionar sin tropiezos todos los días."
                         </blockquote>
 
                         <p className="text-[#F5F5F5]/70 text-lg max-w-2xl mx-auto">
-                            En ese estado de desorden, las decisiones dejan de ser técnicas y
-                            se vuelven reactivas. El margen se erosiona. El equipo se desgasta.
-                            La operación sobrevive, pero no se sostiene.
+                            No somos otra agencia de software. Somos operadores que entienden
+                            tu industria, tus dolores y tus urgencias. Diseñamos soluciones
+                            que funcionan en el mundo real, no en presentaciones.
                         </p>
                     </motion.div>
                 </div>
@@ -75,33 +75,33 @@ export default function Nosotros() {
                         </span>
 
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-12">
-                            Recuperar antes de escalar.
+                            Lo que nos hace diferentes.
                         </h2>
 
                         <p className="text-lg text-white/60 max-w-3xl mb-12">
-                            La recuperación no es un retroceso. Es una fase técnica. Así como un
-                            sistema colapsado necesita estabilización antes de optimización, una
-                            organización necesita recuperar control antes de aspirar a crecer.
+                            Conocemos tu industria. Sabemos lo que es lidiar con rotación de personal,
+                            inventarios que no cuadran y sistemas que no se hablan. Por eso nuestras
+                            soluciones están diseñadas para resolver problemas reales.
                         </p>
 
                         {/* Principles Grid */}
                         <div className="grid md:grid-cols-2 gap-0 border border-[#C8C6D7]/20 divide-y md:divide-y-0 md:divide-x divide-[#C8C6D7]/20">
                             {[
                                 {
-                                    title: "Ver los números sin autoengaño",
-                                    description: "Claridad brutal sobre la realidad financiera y operativa del negocio."
+                                    title: "Entendemos tu operación",
+                                    description: "Nos metemos en la cocina, en el almacén, en el día a día. No diagnosticamos desde afuera."
                                 },
                                 {
-                                    title: "Reconocer los puntos de fuga",
-                                    description: "Identificar dónde se pierde margen, tiempo y capacidad de ejecución."
+                                    title: "Soluciones prácticas, no teoría",
+                                    description: "Cada recomendación viene con un plan de ejecución claro y medible."
                                 },
                                 {
-                                    title: "Detener la improvisación crónica",
-                                    description: "Reemplazar el heroísmo diario por procesos predecibles."
+                                    title: "Tecnología que sirve",
+                                    description: "No implementamos herramientas de moda. Implementamos lo que tu equipo va a usar."
                                 },
                                 {
-                                    title: "Volver a operar con criterio",
-                                    description: "Decisiones basadas en datos, no en urgencias."
+                                    title: "Resultados medibles",
+                                    description: "Reducción de costos, tiempos y errores que puedes ver en los números."
                                 },
                             ].map((item, i) => (
                                 <motion.div
@@ -143,20 +143,20 @@ export default function Nosotros() {
                                 01
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                                Rigor antes que motivación.
+                                Experiencia en tu industria.
                             </h3>
                             <p className="text-white/60 text-lg leading-relaxed mb-4">
-                                Integra no trabaja desde la inspiración. Trabaja desde el rigor.
+                                Años trabajando con hoteles, restaurantes y retail nos dieron algo que no se aprende en libros.
                             </p>
                             <p className="text-white/50 leading-relaxed">
-                                No prometemos cambios rápidos ni resultados milagrosos. Diseñamos
-                                estructuras que obligan a la operación a comportarse de forma sana
-                                y predecible.
+                                Conocemos los ciclos de temporada, la presión del servicio en vivo
+                                y lo que significa que un sistema falle en hora pico. Por eso nuestras
+                                soluciones están diseñadas para resistir la realidad.
                             </p>
                             <div className="mt-6 space-y-2 font-mono text-sm text-[#C8C6D7]">
-                                <p>→ Medimos antes de opinar.</p>
-                                <p>→ Estructuramos antes de optimizar.</p>
-                                <p>→ Ejecutamos antes de escalar.</p>
+                                <p>→ Hablamos tu idioma, no jerga técnica.</p>
+                                <p>→ Soluciones que funcionan desde el día uno.</p>
+                                <p>→ Acompañamiento real, no solo entrega de documentos.</p>
                             </div>
                         </motion.div>
 
@@ -171,20 +171,20 @@ export default function Nosotros() {
                                 02
                             </span>
                             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                                Humanizar para rentabilizar.
+                                Tu equipo es parte de la solución.
                             </h3>
                             <p className="text-white/60 text-lg leading-relaxed mb-4">
-                                La salud del equipo no es un beneficio colateral. Es una variable económica.
+                                Las mejores herramientas fracasan si el equipo no las adopta.
                             </p>
                             <p className="text-white/50 leading-relaxed">
-                                Un equipo con claridad comete menos errores, cuida el costo, reduce
-                                rotación y protege el margen. El alto rendimiento no se impone con
-                                discurso. Se diseña.
+                                Diseñamos la transición pensando en las personas que van a usar
+                                los sistemas cada día. Menos estrés, menos errores, más autonomía.
+                                Un equipo empoderado es un equipo rentable.
                             </p>
                             <div className="mt-6 space-y-2 font-mono text-sm text-[#C8C6D7]">
-                                <p>→ Reducir carga cognitiva.</p>
-                                <p>→ Eliminar fricción innecesaria.</p>
-                                <p>→ Actuar con claridad bajo presión.</p>
+                                <p>→ Capacitación práctica, no manuales eternos.</p>
+                                <p>→ Herramientas que simplifican, no complican.</p>
+                                <p>→ Soporte continuo post-implementación.</p>
                             </div>
                         </motion.div>
                     </div>
@@ -205,12 +205,12 @@ export default function Nosotros() {
                         </span>
 
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 leading-relaxed">
-                            Transformar operaciones no es solo ajustar números. Es rediseñar la
-                            forma en que las personas piensan, deciden y ejecutan dentro del sistema.
+                            No buscamos clientes. Buscamos socios que quieran transformar
+                            su operación de verdad.
                         </h2>
 
                         <p className="text-xl text-[#C8C6D7] font-semibold mb-12">
-                            "La integridad operativa es rentable."
+                            "Tu paz mental operativa es nuestro KPI."
                         </p>
 
                         {/* CTA */}
@@ -219,13 +219,13 @@ export default function Nosotros() {
                             whileTap={{ scale: 0.98 }}
                         >
                             <Link
-                                href="/diagnostico"
+                                href="/contacto"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                            transition-all duration-300 ease-out
                            hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/20
                            active:translate-y-0"
                             >
-                                Solicitar diagnóstico operativo
+                                Hablemos de tu negocio
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"

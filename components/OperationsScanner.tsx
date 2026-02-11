@@ -322,7 +322,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                 animation: "gradientShift 4s ease infinite",
                             }}
                         >
-                            OPERACIONES
+                            HAZ QUE TU OPERACIÓN
                         </motion.h1>
                         <motion.h1
                             className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
@@ -339,24 +339,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                 animation: "gradientShift 5s ease infinite 0.5s",
                             }}
                         >
-                            QUE SOSTIENEN
-                        </motion.h1>
-                        <motion.h1
-                            className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: textVisible ? 0 : 20, opacity: textVisible ? 1 : 0 }}
-                            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                            style={{
-                                backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 50%, #C8C6D7 100%)",
-                                backgroundSize: "200% 200%",
-                                backgroundClip: "text",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                filter: "drop-shadow(0 0 45px rgba(74, 64, 99, 0.5)) drop-shadow(0 0 70px rgba(200, 198, 215, 0.3)) drop-shadow(0 4px 30px rgba(0,0,0,0.5))",
-                                animation: "gradientShift 7s ease infinite 1.2s",
-                            }}
-                        >
-                            EL CRECIMIENTO.
+                            NUNCA SE DETENGA.
                         </motion.h1>
                     </motion.div>
 
@@ -408,7 +391,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                         animation: "gradientShift 6s ease infinite",
                                     }}
                                 >
-                                    OPERACIONES
+                                    HAZ QUE TU OPERACIÓN
                                 </motion.h1>
                                 <motion.h1
                                     className="text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.85] tracking-[-0.04em] uppercase relative"
@@ -425,24 +408,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                         animation: "gradientShift 7s ease infinite 0.8s",
                                     }}
                                 >
-                                    QUE SOSTIENEN
-                                </motion.h1>
-                                <motion.h1
-                                    className="text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.85] tracking-[-0.04em] uppercase relative"
-                                    initial={{ y: 30, opacity: 0 }}
-                                    animate={{ y: textVisible ? 0 : 30, opacity: textVisible ? 1 : 0 }}
-                                    transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                                    style={{
-                                        backgroundImage: "linear-gradient(135deg, #C8C6D7 0%, var(--brand-primary) 30%, #6A5A7D 60%, #C8C6D7 100%)",
-                                        backgroundSize: "300% 300%",
-                                        backgroundClip: "text",
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent",
-                                        filter: "drop-shadow(0 0 55px rgba(74, 64, 99, 0.6)) drop-shadow(0 0 90px rgba(200, 198, 215, 0.4)) drop-shadow(0 8px 40px rgba(0,0,0,0.6))",
-                                        animation: "gradientShift 7.5s ease infinite 1.5s",
-                                    }}
-                                >
-                                    EL CRECIMIENTO.
+                                    NUNCA SE DETENGA.
                                 </motion.h1>
                             </div>
                         </motion.div>
@@ -456,7 +422,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 lg:gap-12">
-                            {["Control", "Eficiencia", "Margen"].map((word, i) => (
+                            {["Sin tropiezos", "Sin excusas", "Sin pausa"].map((word, i) => (
                                 <motion.div
                                     key={i}
                                     className="relative group cursor-default pointer-events-auto"

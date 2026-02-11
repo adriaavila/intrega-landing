@@ -21,12 +21,12 @@ export default function Blog() {
                         </span>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                            Insights Operativos
+                            Blog
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-                            Análisis, casos de estudio y reflexiones sobre operaciones,
-                            sistemas y alto rendimiento.
+                            Aprendizajes, tendencias y consejos prácticos para negocios
+                            en hospitalidad y retail.
                         </p>
                     </motion.div>
 

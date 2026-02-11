@@ -6,63 +6,64 @@ import Link from "next/link";
 const services = [
     {
         number: "01",
-        title: "Auditoría Operativa",
-        subtitle: "Visibilidad real de P&L y flujos de caja",
-        desc: "Analizamos la operación desde dentro para entender qué está funcionando, qué no y por qué.",
+        title: "Consultoría",
+        subtitle: "Te escuchamos y proponemos soluciones reales",
+        desc: "Entendemos tus retos operativos y diseñamos un plan concreto. Sin teoría, sin humo.",
         items: [
-            "Lectura real del Prime Cost y márgenes",
-            "Análisis de flujos operativos y financieros",
-            "Identificación de fugas invisibles de rentabilidad",
-            "Diagnóstico de fricción operativa y humana"
+            "Diagnóstico de procesos y puntos de fricción",
+            "Análisis de costos y márgenes reales",
+            "Plan de acción con prioridades claras",
+            "Acompañamiento en la toma de decisiones"
         ],
-        result: "Sin visibilidad, no hay control. Sin control, el crecimiento es riesgo."
+        result: "No necesitas más opiniones. Necesitas un plan que funcione."
     },
     {
         number: "02",
-        title: "Arquitectura de Sistemas",
-        subtitle: "Procesos lean y automatización digital",
-        desc: "Diseñamos la estructura que sostiene la operación sin desgaste constante.",
+        title: "Transformación Digital",
+        subtitle: "Herramientas que multiplican la productividad",
+        desc: "Llevamos tus procesos a plataformas que mejoran la eficiencia del equipo y la experiencia de tu cliente.",
         items: [
-            "Rediseño de procesos críticos",
-            "Estandarización operativa",
-            "Dashboards de negocio a medida",
-            "Automatización de tareas repetitivas"
+            "Migración de procesos manuales a digitales",
+            "Dashboards de negocio en tiempo real",
+            "Automatización de tareas repetitivas",
+            "Capacitación al equipo en nuevas herramientas"
         ],
-        result: "La complejidad no escala. La estructura sí."
+        result: "La mejor tecnología es la que tu equipo realmente usa."
     },
     {
         number: "03",
-        title: "Ejecución Directa",
-        subtitle: "Implementación junto al equipo hasta lograr continuidad",
-        desc: "No entregamos recomendaciones y desaparecemos. Ejecutamos hasta que el sistema funciona sin nosotros.",
+        title: "Integración de Sistemas",
+        subtitle: "Que tus sistemas hablen entre sí",
+        desc: "Conectamos tus herramientas para que la información fluya. Menos datos perdidos, menos pasos manuales, menos errores.",
         items: [
-            "Implementación en campo",
-            "Acompañamiento al liderazgo operativo",
-            "Ajustes en tiempo real",
-            "Transferencia de control al equipo"
+            "Conexión entre POS, inventario y contabilidad",
+            "Flujos automáticos entre plataformas",
+            "Eliminación de doble captura de datos",
+            "Visibilidad unificada de la operación"
         ],
-        result: "El error humano casi siempre es un error de diseño."
+        result: "Un negocio conectado es un negocio que no pierde información."
     },
     {
         number: "04",
-        title: "Digital e IA",
-        subtitle: "Tecnología que agrega valor, no complejidad",
-        desc: "La tecnología no corrige una mala operación. Por eso la aplicamos solo cuando agrega valor.",
+        title: "Soporte Continuo",
+        subtitle: "No te dejamos solo después de implementar",
+        desc: "Te acompañamos para asegurarnos de que todo funcione como debe. Ajustes, mejoras y soporte cuando lo necesites.",
         items: [
-            "Landing pages y ecommerce alineados a la capacidad operativa",
-            "Flujos de pedido simples y claros",
-            "IA para atención al cliente como primer nivel"
+            "Monitoreo continuo post-implementación",
+            "Ajustes y optimización en tiempo real",
+            "Canal directo de soporte prioritario",
+            "Reportes de rendimiento y mejora"
         ],
-        result: "Sin estructura, la IA amplifica el caos. Con estructura, multiplica el rendimiento."
+        result: "Implementar es solo el inicio. El valor está en que funcione todos los días."
     },
 ];
 
 
 const processSteps = [
-    { num: "01", label: "Diagnóstico", desc: "Evaluación inicial de la operación" },
-    { num: "02", label: "Auditoría", desc: "Análisis profundo (2-4 semanas)" },
-    { num: "03", label: "Rediseño", desc: "Arquitectura del sistema operativo" },
-    { num: "04", label: "Ejecución", desc: "Implementación y seguimiento continuo" },
+    { num: "01", label: "Escuchamos", desc: "Entendemos tu negocio y tus retos" },
+    { num: "02", label: "Diagnosticamos", desc: "Análisis profundo de tu operación" },
+    { num: "03", label: "Diseñamos", desc: "Plan a medida con prioridades claras" },
+    { num: "04", label: "Ejecutamos", desc: "Implementación y acompañamiento continuo" },
 ];
 
 export default function Servicios() {
@@ -82,12 +83,12 @@ export default function Servicios() {
                         </span>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                            Recupera el control<br />
-                            <span className="text-[#C8C6D7]">de tu operación.</span>
+                            Tecnología y estrategia para<br />
+                            <span className="text-[#C8C6D7]">negocios que no pueden parar.</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl leading-relaxed mb-10">
-                            Auditoría profunda. Sistemas optimizados. Ejecución real.
+                            Consultoría, transformación digital e integración de sistemas para hospitalidad y retail.
                         </p>
 
                         {/* Primary CTA in hero */}
@@ -96,13 +97,13 @@ export default function Servicios() {
                             whileTap={{ scale: 0.98 }}
                         >
                             <Link
-                                href="/diagnostico"
+                                href="/contacto"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#6D28D9] text-[#F5F5F5] font-semibold text-lg rounded-full
                                 transition-all duration-300 ease-out
                                 hover:bg-[#8B5CF6] hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-[#6D28D9]/30
                                 active:translate-y-0"
                             >
-                                Solicitar diagnóstico gratuito
+                                Hablemos de tu negocio
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
@@ -136,13 +137,13 @@ export default function Servicios() {
                         className="mb-12 md:mb-16 text-center"
                     >
                         <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#C8C6D7] uppercase mb-4">
-                            Servicios Técnicos
+                            Cómo te apoyamos
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Sistemas reales para operaciones reales
+                            Todo lo que necesitas para operar sin fricción
                         </h2>
                         <p className="text-white/50 text-lg max-w-2xl mx-auto">
-                            Entramos donde normalmente nadie quiere mirar: costos, procesos y decisiones.
+                            Soluciones prácticas para los problemas que no te dejan dormir.
                         </p>
                     </motion.div>
 
@@ -263,10 +264,10 @@ export default function Servicios() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            ¿Es para ti?
+                            Para quién trabajamos
                         </h2>
                         <p className="text-white/50 text-lg">
-                            No trabajamos con todos. Aquí está cómo saber si encajamos.
+                            Negocios que quieren crecer sin fricción.
                         </p>
                     </motion.div>
 
@@ -290,15 +291,19 @@ export default function Servicios() {
                             <ul className="space-y-3 text-white/70">
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#6D28D9] mt-1">•</span>
-                                    Empresas con ventas reales buscando orden técnico
+                                    Hoteles y alojamientos
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#6D28D9] mt-1">•</span>
-                                    Equipos dispuestos a cambiar procesos
+                                    Restaurantes y hostelería
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#6D28D9] mt-1">•</span>
-                                    Líderes que priorizan datos sobre intuición
+                                    Tiendas físicas y e-commerce
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-[#6D28D9] mt-1">•</span>
+                                    Cadenas con operaciones complejas
                                 </li>
                             </ul>
                         </motion.div>
@@ -322,7 +327,7 @@ export default function Servicios() {
                             <ul className="space-y-3 text-white/50">
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#C8C6D7]/50 mt-1">•</span>
-                                    Ideas en etapa cero sin tracción
+                                    Ideas sin operación real todavía
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#C8C6D7]/50 mt-1">•</span>
@@ -352,11 +357,11 @@ export default function Servicios() {
                         </span>
 
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F5F5F5] mb-6">
-                            Empieza con un diagnóstico sin costo
+                            ¿Listo para empezar?
                         </h2>
 
                         <p className="text-xl text-[#F5F5F5]/70 mb-10 max-w-2xl mx-auto">
-                            20 minutos. Sin compromiso. Claridad inmediata sobre el estado de tu operación.
+                            Hablemos de tu negocio y tus retos concretos para diseñar un plan que funcione.
                         </p>
 
                         <motion.div
@@ -364,13 +369,13 @@ export default function Servicios() {
                             whileTap={{ scale: 0.98 }}
                         >
                             <Link
-                                href="/diagnostico"
+                                href="/contacto"
                                 className="inline-flex items-center gap-3 px-10 py-5 bg-[#F5F5F5] text-[#6D28D9] font-bold text-lg rounded-full
                                 transition-all duration-300 ease-out
                                 hover:translate-y-[-2px] hover:shadow-2xl hover:shadow-black/30
                                 active:translate-y-0"
                             >
-                                Solicitar diagnóstico gratuito
+                                Hablemos
                                 <svg
                                     className="w-5 h-5"
                                     fill="none"
