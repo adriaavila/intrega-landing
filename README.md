@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Intrega Landing
 
-## Getting Started
+Landing page para **Intrega**, una propuesta de consultoría y transformación digital enfocada en operaciones, integración de sistemas y mejora de procesos para negocios del sector hospitalidad.
 
-First, run the development server:
+## Qué es este proyecto
+
+Este proyecto funciona como una pieza comercial y estratégica: no solo presenta servicios, sino que construye una narrativa de diagnóstico, autoridad y propuesta de valor.
+
+## El reto
+
+El reto principal fue **convertir un servicio abstracto en una experiencia web que hiciera evidente el problema del cliente antes de vender la solución**.
+
+En proyectos de consultoría, muchas veces el visitante no compra “software”, sino claridad. Por eso el desafío fue:
+
+- comunicar dolor operativo real
+- generar percepción de expertise
+- ordenar una oferta compleja en un mensaje simple
+- diseñar una experiencia con carácter propio, no una landing genérica
+
+## Cómo lo resolví
+
+- Construí una experiencia tipo scrollytelling con una apertura visual fuerte.
+- Organicé la página alrededor de diagnóstico, servicios y manifiesto.
+- Usé motion y progresión narrativa para sostener atención y reforzar posicionamiento.
+- Priorizé un lenguaje orientado a negocio: margen, riesgo, datos, operación.
+
+## Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vercel Analytics
+
+## Lo que hace valioso este proyecto
+
+Este proyecto muestra cómo usar diseño y desarrollo para **vender transformación, no solo mostrar una empresa**. La web está pensada para que el visitante entienda el costo de no cambiar.
+
+## Aprendizajes
+
+- Las landings B2B mejoran cuando hablan del problema antes que de la empresa.
+- El ritmo visual puede usarse como herramienta de persuasión.
+- Una identidad digital sólida depende tanto del copy como de la interacción.
+
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Enlace del proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Repositorio: https://github.com/adriaavila/intrega-landing
