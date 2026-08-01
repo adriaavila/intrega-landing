@@ -2,6 +2,8 @@
 
 Landing page para **Intrega**, una propuesta de consultoría y transformación digital enfocada en operaciones, integración de sistemas y mejora de procesos para negocios del sector hospitalidad.
 
+**En vivo:** https://intrega-landing.vercel.app · **Categoría:** Web · **Estado:** en producción
+
 ## Qué es este proyecto
 
 Este proyecto funciona como una pieza comercial y estratégica: no solo presenta servicios, sino que construye una narrativa de diagnóstico, autoridad y propuesta de valor.
@@ -53,3 +55,8 @@ npm run dev
 ## Enlace del proyecto
 
 - Repositorio: https://github.com/adriaavila/intrega-landing
+
+---
+
+**Construido por [creativ3](https://allok.fun)** — software y automatización para negocios.
+[Ver el portafolio](https://allok.fun/projects) · [Pedir cotización](https://allok.fun/cotizar)
