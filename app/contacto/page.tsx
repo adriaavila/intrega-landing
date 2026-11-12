@@ -29,8 +29,10 @@ export default function DiagnosticoPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log("Form submitted:", formData);
+        // Abre un borrador en el cliente de correo; nunca afirma que la solicitud haya sido enviada.
+        const subject = encodeURIComponent("INTEGRA | Conversación sobre transformación operativa");
+        const body = encodeURIComponent(`Nombre: ${formData.nombre}\nOrganización: ${formData.negocio}\nCorreo: ${formData.email}\nTeléfono: ${formData.countryCode} ${formData.telefono}\nPreferencia: ${formData.medioContacto}\nPrioridad operativa: ${formData.bottleneck}`);
+        window.location.href = `mailto:reisanchezgastronomo@gmail.com?subject=${subject}&body=${body}`;
     };
 
     const handleChange = (
@@ -76,7 +78,7 @@ export default function DiagnosticoPage() {
                         Contáctanos
                     </h1>
                     <p className="text-white/60 text-lg max-w-md mx-auto">
-                        ¿Listo para empezar? Hablemos de tu negocio y tus retos concretos para diseñar un plan que funcione.
+                        Solicita una conversación ejecutiva sobre transformación operativa o desarrollo de destinos gastronómicos. El formulario prepara un correo en tu aplicación, no envía datos automáticamente.
                     </p>
                 </div>
 

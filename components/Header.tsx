@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from "framer-motion";
 
 const navItems = [
-    { label: "Nosotros", href: "/nosotros" },
-    { label: "Servicios", href: "/servicios" },
-    { label: "Recursos", href: "/recursos" },
-    { label: "Blog", href: "/blog" },
+    { label: "INTEGRA", href: "/nosotros" },
+    { label: "Transformación", href: "/servicios" },
+    { label: "Ecosistema", href: "/#ecosistema" },
 ];
 
 export function Header() {

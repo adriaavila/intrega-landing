@@ -39,19 +39,19 @@ export default function Home() {
             >
               {/* Section label */}
               <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#C8C6D7] uppercase mb-6">
-                El diagnóstico
+                El punto de partida
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-12">
-                Cada día sin sistema le cuesta dinero a tu negocio.
+                Un destino pierde identidad cuando su operación no la sostiene.
               </h2>
 
               {/* Diagnostic grid with hover states */}
               <div className="grid gap-0 border border-[#C8C6D7]/20 divide-y divide-[#C8C6D7]/20">
                 {[
-                  { num: "01", label: "MARGEN", text: "Vendes más pero al final del mes no queda nada." },
-                  { num: "02", label: "RIESGO", text: "Si tu mejor empleado se va mañana, ¿sobrevive la operación?" },
-                  { num: "03", label: "DATOS", text: "Tres versiones de la verdad: finanzas dice una cosa, inventario otra." },
+                  { num: "01", label: "RENTABILIDAD", text: "Mermas, costes y procesos débiles reducen la capacidad de ofrecer una experiencia sostenible." },
+                  { num: "02", label: "IDENTIDAD", text: "La tradición del territorio no siempre se refleja en productos, servicio y experiencia." },
+                  { num: "03", label: "EXPERIENCIA", text: "La calidad varía entre establecimientos y dificulta construir una ruta confiable." },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -93,17 +93,17 @@ export default function Home() {
             >
               {/* Section label */}
               <span className="inline-block font-mono text-xs tracking-[0.3em] text-[#C8C6D7] uppercase mb-6">
-                Servicios Técnicos
+                Transformación operativa
               </span>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-12 md:mb-16">
-                Cómo te apoyamos.
+                Cómo convertimos identidad en experiencia.
               </h2>
               <div className="space-y-0 divide-y divide-[#C8C6D7]/10">
                 {[
-                  { number: "01", title: "Consultoría", desc: "Te escuchamos, entendemos tus retos y proponemos soluciones prácticas." },
-                  { number: "02", title: "Transformación digital", desc: "Tus procesos en herramientas que multiplican productividad." },
-                  { number: "03", title: "Integración de sistemas", desc: "Hacemos que tus sistemas hablen entre sí. Menos errores, menos pasos manuales." },
+                  { number: "01", title: "Dirección e intervención operativa", desc: "Mejoramos producción, servicio, costes, personas y gestión para que cada negocio exprese su identidad." },
+                  { number: "02", title: "Coherencia territorial", desc: "Articulamos estándares comunes sin volver idénticos a los establecimientos del destino." },
+                  { number: "03", title: "Preparación Sello Valor", desc: "Documentamos mejoras y verificamos evidencias frente a criterios privados en desarrollo; el reconocimiento no es automático." },
                 ].map((step, i) => (
                   <motion.div
                     key={i}
@@ -146,15 +146,15 @@ export default function Home() {
               </span>
 
               <blockquote className="text-2xl md:text-3xl lg:text-4xl text-[#F5F5F5] font-semibold leading-relaxed mb-12">
-                "No te dejamos en el punto de implementación. Te acompañamos hasta que todo funcione."
+                "La identidad no se proclama: debe sostenerse en la forma de operar y servir."
               </blockquote>
 
               {/* Key points */}
               <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 mb-12">
                 {[
-                  "Hoteles y restaurantes que ya operan sin fricción.",
-                  "Cadenas que conectaron todos sus sistemas.",
-                  "Negocios que redujeron tiempos de gestión un 40%."
+                  "Operaciones empresariales preparadas para mejorar productividad y coherencia.",
+                  "Establecimientos diversos articulados por estándares compartidos.",
+                  "Evaluación Sello Valor pendiente de criterios y verificaciones formales."
                 ].map((point, i) => (
                   <motion.p
                     key={i}
@@ -179,7 +179,7 @@ export default function Home() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Hablemos de tu negocio
+                Conversemos sobre la transformación
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -199,6 +199,27 @@ export default function Home() {
         </section>
 
         {/* Section Manifiesto ends here - Footer is now in layout.tsx */}
+
+        <section id="ecosistema" className="relative border-t border-white/10 bg-[#121118] px-4 py-20 md:px-8">
+          <div className="mx-auto max-w-5xl">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.22em] text-[#C8C6D7]">Una capacidad dentro del ecosistema</p>
+            <h2 className="text-3xl font-bold leading-tight text-white md:text-5xl">Mejoramos los negocios que dan vida al destino.</h2>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/70">
+              Convertimos la identidad gastronómica de un destino en experiencias turísticas de valor. INTEGRA mejora cómo funcionan
+              los negocios, Sello Valor prepara la evaluación de sus estándares y VIAJA muestra las rutas al visitante.
+              Todo bajo Rei Sánchez | Dirección Ejecutiva.
+            </p>
+            <div className="mt-9 grid gap-5 text-white/70 md:grid-cols-3">
+              <div className="border-t border-white/20 pt-4"><strong className="block text-white">INTEGRA</strong> Transformación de producción, servicio, equipos, margen y experiencia.</div>
+              <div className="border-t border-white/20 pt-4"><strong className="block text-white">Sello Valor</strong> Estándares privados propuestos, con evaluación pendiente. No es aval ni certificación oficial.</div>
+              <div className="border-t border-white/20 pt-4"><strong className="block text-white">VIAJA</strong> Rutas y experiencias de un destino preparado. Colonia Tovar es el demostrador actual.</div>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-5 text-sm font-semibold">
+              <a href="https://reisanchez-direccion-ejecutiva.netlify.app" target="_blank" rel="noopener noreferrer" className="text-[#C8C6D7] underline underline-offset-4">Quién dirige el sistema</a>
+              <a href="https://viaja-ven.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#C8C6D7] underline underline-offset-4">Explorar VIAJA (demo)</a>
+            </div>
+          </div>
+        </section>
       </OperationsScanner>
     </main>
   );

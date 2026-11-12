@@ -6,22 +6,22 @@ import Link from "next/link";
 const services = [
     {
         number: "01",
-        title: "Consultoría",
-        subtitle: "Te escuchamos y proponemos soluciones reales",
-        desc: "Entendemos tus retos operativos y diseñamos un plan concreto. Sin teoría, sin humo.",
+        title: "Dirección operativa",
+        subtitle: "De la identidad al proceso que sostiene la experiencia",
+        desc: "Intervenimos producción, costes, servicio y equipos para mejorar empresas y preparar experiencias coherentes con su territorio.",
         items: [
             "Diagnóstico de procesos y puntos de fricción",
             "Análisis de costos y márgenes reales",
             "Plan de acción con prioridades claras",
             "Acompañamiento en la toma de decisiones"
         ],
-        result: "No necesitas más opiniones. Necesitas un plan que funcione."
+        result: "La dirección ejecutiva transforma prioridades en estándares y ejecución."
     },
     {
         number: "02",
-        title: "Transformación Digital",
-        subtitle: "Herramientas que multiplican la productividad",
-        desc: "Llevamos tus procesos a plataformas que mejoran la eficiencia del equipo y la experiencia de tu cliente.",
+        title: "Coherencia territorial",
+        subtitle: "Estándares compartidos, negocios con personalidad propia",
+        desc: "Articulamos criterios de experiencia entre establecimientos, proveedores y servicios sin uniformar su identidad.",
         items: [
             "Migración de procesos manuales a digitales",
             "Dashboards de negocio en tiempo real",
@@ -32,9 +32,9 @@ const services = [
     },
     {
         number: "03",
-        title: "Integración de Sistemas",
-        subtitle: "Que tus sistemas hablen entre sí",
-        desc: "Conectamos tus herramientas para que la información fluya. Menos datos perdidos, menos pasos manuales, menos errores.",
+        title: "Preparación para Sello Valor",
+        subtitle: "Documentar y evaluar mejoras operativas",
+        desc: "Organizamos evidencias para evaluar autenticidad, calidad de servicio y excelencia operativa bajo un protocolo privado en desarrollo.",
         items: [
             "Conexión entre POS, inventario y contabilidad",
             "Flujos automáticos entre plataformas",
@@ -45,8 +45,8 @@ const services = [
     },
     {
         number: "04",
-        title: "Soporte Continuo",
-        subtitle: "No te dejamos solo después de implementar",
+        title: "Seguimiento y mejora continua",
+        subtitle: "La experiencia también se mide y se corrige",
         desc: "Te acompañamos para asegurarnos de que todo funcione como debe. Ajustes, mejoras y soporte cuando lo necesites.",
         items: [
             "Monitoreo continuo post-implementación",
@@ -88,7 +88,7 @@ export default function Servicios() {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-2xl leading-relaxed mb-10">
-                            Consultoría, transformación digital e integración de sistemas para hospitalidad y retail.
+                            Dirección e intervención operativa para convertir la identidad gastronómica de un territorio en experiencias verificables.
                         </p>
 
                         {/* Primary CTA in hero */}

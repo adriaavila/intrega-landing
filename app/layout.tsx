@@ -25,20 +25,20 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
+    default: "INTEGRA | Transformación Operativa · Destinos Gastronómicos",
     template: "%s | INTEGRA",
   },
   description:
-    "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
+    "Transformación operativa de establecimientos y destinos gastronómicos desde su identidad. INTEGRA integra Dirección Ejecutiva, Sello Valor y VIAJA.",
   keywords: [
-    "consultoría hospitalidad",
+    "dirección operativa gastronómica",
     "transformación digital restaurantes",
-    "integración de sistemas retail",
+    "identidad turística territorial",
     "gestión operativa hoteles",
     "automatización de procesos",
-    "soporte tecnológico hostelería",
+    "Sello Valor",
     "eficiencia operativa",
-    "digitalización de negocios",
+    "destinos gastronómicos",
   ],
   authors: [{ name: "Integra" }],
   creator: "Integra",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
+    title: "INTEGRA | Transformación Operativa · Destinos Gastronómicos",
     description:
-      "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
+      "Transformación operativa de establecimientos y destinos gastronómicos desde su identidad. INTEGRA integra Dirección Ejecutiva, Sello Valor y VIAJA.",
     url: "https://intrega-landing.vercel.app/",
     siteName: "INTEGRA",
     locale: "es_ES",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "INTEGRA | Consultoría y Servicios para Hospitalidad & Retail",
+    title: "INTEGRA | Transformación Operativa · Destinos Gastronómicos",
     description:
-      "Consultoría, transformación digital e integración de sistemas para hoteles, restaurantes y retail. Haz que tu operación nunca se detenga.",
+      "Transformación operativa de establecimientos y destinos gastronómicos desde su identidad. INTEGRA integra Dirección Ejecutiva, Sello Valor y VIAJA.",
   },
   robots: {
     index: true,

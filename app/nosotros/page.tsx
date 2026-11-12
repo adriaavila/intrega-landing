@@ -19,14 +19,14 @@ export default function Nosotros() {
                         </span>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                            Socios estratégicos que{" "}
-                            <span className="text-[#C8C6D7]">salvan tu operación.</span>
+                            Transformación operativa que{" "}
+                            <span className="text-[#C8C6D7]">sostiene la identidad.</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/60 max-w-3xl leading-relaxed">
-                            INTEGRA ayuda a empresas de hotelería, restaurantes, tiendas y cadenas
-                            de retail a modernizar sus procesos y sistemas. Nos enfocamos en que tus
-                            operaciones sean más ágiles, seguras y fáciles de gestionar.
+                            INTEGRA desarrolla capacidades operativas en establecimientos gastronómicos,
+                            productores y servicios de destino. Partimos de la identidad y la convertimos
+                            en procesos, estándares y experiencias coherentes bajo Rei Sánchez | Dirección Ejecutiva.
                         </p>
                     </motion.div>
                 </div>
@@ -49,13 +49,12 @@ export default function Nosotros() {
                         </span>
 
                         <blockquote className="text-2xl md:text-3xl lg:text-4xl text-[#F5F5F5] font-semibold leading-relaxed mb-8">
-                            "Tu negocio merece funcionar sin tropiezos todos los días."
+                            "La identidad se sostiene cuando la operación es coherente."
                         </blockquote>
 
                         <p className="text-[#F5F5F5]/70 text-lg max-w-2xl mx-auto">
-                            No somos otra agencia de software. Somos operadores que entienden
-                            tu industria, tus dolores y tus urgencias. Diseñamos soluciones
-                            que funcionan en el mundo real, no en presentaciones.
+                            Partimos de la identidad y trabajamos sobre producción, servicio, personas y rentabilidad.
+                            La coherencia de un destino se construye en sus operaciones, no solamente en su promoción.
                         </p>
                     </motion.div>
                 </div>

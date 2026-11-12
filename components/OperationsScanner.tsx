@@ -322,7 +322,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                 animation: "gradientShift 4s ease infinite",
                             }}
                         >
-                            HAZ QUE TU OPERACIÓN
+                            IDENTIDAD Y OPERACIÓN
                         </motion.h1>
                         <motion.h1
                             className="text-[clamp(2rem,9vw,3rem)] font-black leading-[0.85] tracking-[-0.03em] uppercase"
@@ -339,7 +339,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                 animation: "gradientShift 5s ease infinite 0.5s",
                             }}
                         >
-                            NUNCA SE DETENGA.
+                            EN UN MISMO DESTINO.
                         </motion.h1>
                     </motion.div>
 
@@ -391,7 +391,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                         animation: "gradientShift 6s ease infinite",
                                     }}
                                 >
-                                    HAZ QUE TU OPERACIÓN
+                                    IDENTIDAD Y OPERACIÓN
                                 </motion.h1>
                                 <motion.h1
                                     className="text-[clamp(2.5rem,7vw,5rem)] font-black leading-[0.85] tracking-[-0.04em] uppercase relative"
@@ -408,7 +408,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                                         animation: "gradientShift 7s ease infinite 0.8s",
                                     }}
                                 >
-                                    NUNCA SE DETENGA.
+                                    EN UN MISMO DESTINO.
                                 </motion.h1>
                             </div>
                         </motion.div>
@@ -422,7 +422,7 @@ export function OperationsScanner({ children }: OperationsScannerProps) {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 lg:gap-12">
-                            {["Sin tropiezos", "Sin excusas", "Sin pausa"].map((word, i) => (
+                            {["Identidad", "Operación", "Experiencia"].map((word, i) => (
                                 <motion.div
                                     key={i}
                                     className="relative group cursor-default pointer-events-auto"
